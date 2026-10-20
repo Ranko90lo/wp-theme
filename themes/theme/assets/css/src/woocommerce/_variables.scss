@@ -1,0 +1,10 @@
+// WooCommerce-specific variables derived from Bootstrap.
+// Override any of these in variables.scss (before @import "~bootstrap").
+
+$wc-star-color:          $warning !default;
+$wc-sale-badge-bg:       $danger !default;
+$wc-sale-badge-color:    color-contrast($wc-sale-badge-bg) !default;
+$wc-price-sale-color:    $danger !default;
+$wc-price-color:         $body-color !default;
+$wc-out-of-stock-color:  $secondary !default;
+$wc-meta-color:          $text-muted !default;

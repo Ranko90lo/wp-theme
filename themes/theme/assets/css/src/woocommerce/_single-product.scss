@@ -1,0 +1,184 @@
+.woocommerce,
+.woocommerce-page {
+    div.product {
+        .product_title {
+            font-size: $h2-font-size;
+            font-weight: $headings-font-weight;
+            font-family: $headings-font-family;
+            color: $headings-color;
+            margin-bottom: $spacer * .5;
+        }
+
+        // Rating row
+        .woocommerce-product-rating {
+            display: flex;
+            align-items: center;
+            gap: $spacer * .5;
+            margin-bottom: $spacer;
+
+            .star-rating {
+                color: $wc-star-color;
+            }
+
+            .woocommerce-review-link {
+                font-size: $font-size-sm;
+                color: $text-muted;
+
+                &:hover {
+                    color: $link-hover-color;
+                }
+            }
+        }
+
+        // Price
+        p.price,
+        span.price {
+            font-size: $h4-font-size;
+            font-weight: $font-weight-bold;
+            color: $wc-price-color;
+            margin-bottom: $spacer;
+
+            del {
+                opacity: .6;
+                font-size: $font-size-base;
+                font-weight: $font-weight-normal;
+                margin-right: $spacer * .25;
+            }
+
+            ins {
+                text-decoration: none;
+                color: $wc-price-sale-color;
+            }
+        }
+
+        // Short description
+        .woocommerce-product-details__short-description {
+            color: $body-color;
+            margin-bottom: $spacer;
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        // Add to cart form
+        form.cart {
+            display: flex;
+            align-items: center;
+            gap: $spacer * .75;
+            flex-wrap: wrap;
+            margin-bottom: $spacer * 1.5;
+
+            .quantity {
+                input.qty {
+                    width: 4.5rem;
+                }
+            }
+
+            .single_add_to_cart_button {
+                flex-grow: 1;
+            }
+        }
+
+        // Product meta (SKU, categories, tags)
+        .product_meta {
+            font-size: $font-size-sm;
+            color: $wc-meta-color;
+            border-top: $border-width solid $border-color;
+            padding-top: $spacer;
+
+            span {
+                display: block;
+                margin-bottom: $spacer * .25;
+            }
+
+            a {
+                color: $link-color;
+
+                &:hover {
+                    color: $link-hover-color;
+                }
+            }
+        }
+
+        // Tabs (description, reviews)
+        .woocommerce-tabs {
+            margin-top: $spacer * 2;
+
+            ul.tabs {
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 0 0 -1px;
+                border-bottom: $border-width solid $border-color;
+                gap: $spacer * .25;
+
+                li {
+                    a {
+                        display: block;
+                        padding: $nav-link-padding-y $nav-link-padding-x;
+                        border: $border-width solid transparent;
+                        border-radius: $border-radius $border-radius 0 0;
+                        color: $nav-link-color;
+                        text-decoration: none;
+                        font-weight: $font-weight-semibold;
+
+                        &:hover {
+                            color: $nav-link-hover-color;
+                            border-color: $border-color $border-color transparent;
+                        }
+                    }
+
+                    &.active a {
+                        color: $nav-tabs-link-active-color;
+                        background-color: $nav-tabs-link-active-bg;
+                        border-color: $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-link-active-bg;
+                    }
+                }
+            }
+
+            .panel {
+                padding: $spacer * 1.5;
+                border: $border-width solid $border-color;
+                border-top: 0;
+                border-radius: 0 0 $border-radius $border-radius;
+            }
+        }
+    }
+
+    // Star rating (shared)
+    .star-rating {
+        overflow: hidden;
+        position: relative;
+        height: 1em;
+        line-height: 1;
+        font-size: $font-size-base;
+        width: 5.3em;
+
+        &::before {
+            content: "\73\73\73\73\73";
+            color: $gray-300;
+            float: left;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+
+        span {
+            overflow: hidden;
+            float: left;
+            top: 0;
+            left: 0;
+            position: absolute;
+            padding-top: 1.5em;
+
+            &::before {
+                content: "\53\53\53\53\53";
+                color: $wc-star-color;
+                top: 0;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,134 @@
+.woocommerce-account {
+    .woocommerce {
+        display: flex;
+        gap: $spacer * 2;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    // Sidebar navigation
+    .woocommerce-MyAccount-navigation {
+        flex: 0 0 auto;
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            width: 14rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border: $border-width solid $border-color;
+            border-radius: $border-radius;
+            overflow: hidden;
+
+            li {
+                border-bottom: $border-width solid $border-color;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                a {
+                    display: block;
+                    padding: $spacer * .75 $spacer;
+                    color: $body-color;
+                    text-decoration: none;
+                    transition: background-color .15s ease-in-out, color .15s ease-in-out;
+
+                    &:hover {
+                        background-color: tint-color($primary, 90%);
+                        color: $primary;
+                    }
+                }
+
+                &.is-active a {
+                    background-color: $primary;
+                    color: color-contrast($primary);
+                    font-weight: $font-weight-semibold;
+                }
+            }
+        }
+    }
+
+    // Main content area
+    .woocommerce-MyAccount-content {
+        flex: 1 1 0;
+        min-width: 0;
+
+        p:first-child {
+            margin-top: 0;
+        }
+
+        // Orders table
+        table.woocommerce-orders-table,
+        table.woocommerce-MyAccount-orders {
+            th {
+                font-size: $font-size-sm;
+                color: $text-muted;
+                text-transform: uppercase;
+                letter-spacing: .05em;
+            }
+
+            .woocommerce-orders-table__cell-order-status {
+                span {
+                    display: inline-block;
+                    padding: .2em .6em;
+                    font-size: $font-size-sm;
+                    font-weight: $font-weight-semibold;
+                    border-radius: $badge-border-radius;
+                    background-color: $light;
+                    color: $body-color;
+                }
+            }
+
+            // Status colors
+            mark {
+                background: none;
+                padding: 0;
+
+                &.order-status {
+                    display: inline-block;
+                    padding: .2em .6em;
+                    font-size: $font-size-sm;
+                    font-weight: $font-weight-semibold;
+                    border-radius: $badge-border-radius;
+
+                    &.status-completed { background-color: tint-color($success, 80%); color: shade-color($success, 30%); }
+                    &.status-processing { background-color: tint-color($primary, 80%); color: shade-color($primary, 30%); }
+                    &.status-on-hold { background-color: tint-color($warning, 80%); color: shade-color($warning, 40%); }
+                    &.status-cancelled { background-color: tint-color($danger, 80%); color: shade-color($danger, 30%); }
+                    &.status-refunded { background-color: tint-color($secondary, 80%); color: shade-color($secondary, 30%); }
+                    &.status-failed { background-color: tint-color($danger, 60%); color: shade-color($danger, 40%); }
+                    &.status-pending { background-color: tint-color($info, 80%); color: shade-color($info, 40%); }
+                }
+            }
+        }
+
+        // Address boxes
+        .woocommerce-Address {
+            border: $border-width solid $border-color;
+            border-radius: $border-radius;
+            padding: $spacer * 1.5;
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: $spacer;
+
+                h3 {
+                    font-size: $h6-font-size;
+                    font-weight: $font-weight-semibold;
+                    margin: 0;
+                }
+            }
+
+            address {
+                font-style: normal;
+                color: $body-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.woocommerce,
+.woocommerce-page {
+    .woocommerce-message,
+    .woocommerce-error,
+    .woocommerce-info {
+        display: block;
+        padding: $alert-padding-y $alert-padding-x;
+        margin-bottom: $alert-margin-bottom;
+        border: $alert-border-width solid transparent;
+        border-radius: $alert-border-radius;
+        list-style: none;
+
+        a:not(.button) {
+            font-weight: $font-weight-bold;
+        }
+
+        .button {
+            float: right;
+        }
+
+        &::before {
+            font-family: WooCommerce;
+            margin-right: $spacer * .5;
+        }
+    }
+
+    .woocommerce-message {
+        background-color: tint-color($success, 80%);
+        border-color: tint-color($success, 60%);
+        color: shade-color($success, 40%);
+
+        a:not(.button) {
+            color: shade-color($success, 40%);
+        }
+    }
+
+    .woocommerce-error {
+        background-color: tint-color($danger, 80%);
+        border-color: tint-color($danger, 60%);
+        color: shade-color($danger, 40%);
+
+        li {
+            margin-bottom: 0;
+        }
+
+        a:not(.button) {
+            color: shade-color($danger, 40%);
+        }
+    }
+
+    .woocommerce-info {
+        background-color: tint-color($info, 80%);
+        border-color: tint-color($info, 60%);
+        color: shade-color($info, 40%);
+
+        a:not(.button) {
+            color: shade-color($info, 40%);
+        }
+    }
+
+    // Inline notices (e.g. product tabs)
+    .wc-block-components-notice-banner {
+        &.is-error {
+            border-left-color: $danger;
+        }
+
+        &.is-success {
+            border-left-color: $success;
+        }
+
+        &.is-warning {
+            border-left-color: $warning;
+        }
+
+        &.is-info {
+            border-left-color: $info;
+        }
+    }
+}

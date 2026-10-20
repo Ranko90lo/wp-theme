@@ -1,0 +1,6 @@
+body.woocommerce,
+body.woocommerce-page {
+    div.woocommerce {
+        @extend .container;
+    }
+}

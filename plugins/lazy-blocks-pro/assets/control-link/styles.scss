@@ -1,0 +1,138 @@
+/**
+ * Link Control Styles
+ */
+
+// Inspector/popup placement - LinkControl wrapper.
+.lzb-pro-control-link {
+	position: relative;
+
+	.block-editor-link-control {
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+		margin-bottom: 0;
+	}
+
+	.components-input-control {
+		margin-bottom: 0;
+	}
+
+	.block-editor-link-control__field,
+	.block-editor-link-control__search-input {
+		margin: 0;
+		margin-bottom: 18px;
+	}
+
+	.block-editor-link-control__tools {
+		padding: 0;
+	}
+
+	.block-editor-link-control__setting,
+	.block-editor-link-control__settings .components-checkbox-control {
+		padding-left: 15px;
+		margin-bottom: 0;
+	}
+
+	// CSS classes control.
+	.block-editor-link-control__setting {
+		.components-checkbox-control {
+			padding-left: 0;
+		}
+		.lzb-pro-control-link-css-classes-input > .components-base-control__field {
+			flex-direction: column;
+			margin-top: 15px;
+		}
+	}
+
+	.block-editor-link-control__search-input.block-editor-link-control__search-input input[type="text"] {
+		width: 100%;
+		padding: 6px 4px;
+		margin: 0;
+		border-color: #757575;
+
+		&:focus {
+			color: #191e23;
+			border-color: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+			outline: 2px solid transparent;
+			box-shadow: 0 0 0 1px var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+		}
+	}
+
+	.block-editor-link-control__search-actions {
+		top: 2px;
+		right: 2px;
+		padding: 0;
+		margin-top: 16px;
+
+		.components-button {
+			height: 30px;
+		}
+	}
+
+	.block-editor-link-control__search-results-wrapper {
+		margin-top: 0;
+	}
+
+	.block-editor-link-control__search-results {
+		padding-bottom: 0;
+		margin-top: 0;
+		margin-right: -16px;
+		margin-left: -16px;
+	}
+
+	.block-editor-link-control__search-item.is-current {
+		padding: 5px 0;
+	}
+
+	.lzb-inspector-controls & {
+		.block-editor-url-input {
+			min-width: 200px;
+		}
+		.components-menu-item__item {
+			min-width: 130px;
+		}
+	}
+}
+
+// Content placement - URL field with modal trigger.
+.lzb-pro-control-link-in-content {
+	position: relative;
+
+	.lzb-pro-control-link-in-content-button {
+		position: absolute;
+		inset: -5px;
+		z-index: 2;
+		height: auto;
+		opacity: 0;
+		transition: opacity 140ms ease;
+	}
+
+	.lzb-pro-control-link-in-content-button:hover,
+	.lzb-pro-control-link-in-content-button:focus,
+	.lzb-pro-control-link-in-content-button[aria-expanded="true"] {
+		~ .lazyblocks-control-link input[type="text"] {
+			color: #191e23;
+			border-color: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+			outline: 2px solid transparent;
+			box-shadow: 0 0 0 1px var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+		}
+	}
+}
+
+// Modal content styles.
+.lzb-pro-control-link-modal {
+	.lzb-pro-control-link-modal-content {
+		min-width: 350px;
+
+		.block-editor-link-control {
+			width: 100%;
+			min-width: 0;
+			max-width: 100%;
+		}
+	}
+}
+
+// Custom CSS classes input within LinkControl settings.
+.lzb-pro-control-link-css-classes {
+	margin-top: 8px;
+}

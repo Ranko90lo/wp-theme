@@ -1,0 +1,27 @@
+{
+  "name": "theme",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "wp-scripts build",
+    "dev": "wp-scripts start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "31.6.0",
+    "css-loader": "7.1.4",
+    "mini-css-extract-plugin": "2.10.2",
+    "sass": "1.99.0",
+    "sass-loader": "16.0.7",
+    "style-loader": "4.0.0",
+    "svg-spritemap-webpack-plugin": "4.4.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "2.11.8",
+    "bootstrap": "5.3.8",
+    "jquery-ui-dist": "1.13.3"
+  }
+}

@@ -1,0 +1,53 @@
+{
+    "name": "devstudio/wp-theme",
+    "authors": [
+        {
+            "name": "Devstudio",
+            "email": "kontakt@devstudio.rs"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "composer/installers": "~1.0",
+        "automattic/vipwpcs": "^2.3",
+        "wpackagist-plugin/webp-converter-for-media": "6.5.5",
+        "wpackagist-plugin/lazy-blocks": "4.2.1",
+        "wpackagist-plugin/wordpress-seo": "27.4",
+        "wpackagist-plugin/svg-support": "2.5.14",
+        "wpackagist-plugin/redirection": "5.7.5",
+        "wpackagist-plugin/wp-fastest-cache": "1.4.7",
+        "wpackagist-plugin/elementor": "4.0.3"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "0.7.2",
+        "johnpbloch/wordpress": "7.0.2"
+    },
+    "extra": {
+        "wordpress-install-dir": "local/public/wp",
+        "installer-paths": {
+            "plugins/{$name}": ["type:wordpress-plugin"],
+            "themes/{$name}": ["type:wordpress-theme"]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "johnpbloch/wordpress-core-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "lint": [
+            "phpcs -d memory_limit=512M -p"
+        ],
+        "phpcs-theme": [
+            "phpcs -d memory_limit=512M --standard=WordPress-VIP-Go themes/theme"
+        ]
+    }
+}

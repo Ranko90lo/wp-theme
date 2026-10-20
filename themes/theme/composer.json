@@ -1,0 +1,17 @@
+{
+    "name": "devstudio-rs/theme",
+    "autoload": {
+        "psr-4": {
+            "theme\\": "."
+        }
+    },
+    "authors": [
+        {
+            "name": "dev.studio",
+            "email": "kontakt@devstudio.rs"
+        }
+    ],
+    "require": {
+        "devstudio-rs/wpmvc": "1.7.0"
+    }
+}

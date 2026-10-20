@@ -1,0 +1,15 @@
+.w-max {
+  @each $key, $value in $widths {
+    &-#{$key} {
+      max-width: $value;
+    }
+  }
+
+  @media (min-width: 992px) {
+    @each $key, $value in $widths {
+      &-lg-#{$key} {
+        max-width: $value;
+      }
+    }
+  }
+}

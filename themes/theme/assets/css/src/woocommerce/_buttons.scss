@@ -1,0 +1,74 @@
+.woocommerce,
+.woocommerce-page {
+    a.button,
+    button.button,
+    input.button,
+    .button,
+    #respond input#submit {
+        display: inline-block;
+        font-family: $btn-font-family;
+        font-size: $btn-font-size;
+        font-weight: $btn-font-weight;
+        line-height: $btn-line-height;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        user-select: none;
+        padding: $btn-padding-y $btn-padding-x;
+        border-radius: $btn-border-radius;
+        border: $btn-border-width solid $primary;
+        background-color: $primary;
+        color: color-contrast($primary);
+        transition: $btn-transition;
+        box-shadow: none;
+        appearance: none;
+
+        &:hover,
+        &:focus {
+            background-color: shade-color($primary, 15%);
+            border-color: shade-color($primary, 20%);
+            color: color-contrast($primary);
+            text-decoration: none;
+            outline: none;
+        }
+
+        &:disabled,
+        &.disabled {
+            opacity: $btn-disabled-opacity;
+            pointer-events: none;
+        }
+    }
+
+    a.button.alt,
+    button.button.alt,
+    .button.alt {
+        background-color: $secondary;
+        border-color: $secondary;
+        color: color-contrast($secondary);
+
+        &:hover,
+        &:focus {
+            background-color: shade-color($secondary, 15%);
+            border-color: shade-color($secondary, 20%);
+            color: color-contrast($secondary);
+        }
+    }
+
+    a.button.small,
+    button.button.small,
+    .button.small {
+        padding: $btn-padding-y-sm $btn-padding-x-sm;
+        font-size: $btn-font-size-sm;
+        border-radius: $btn-border-radius-sm;
+    }
+
+    a.button.large,
+    button.button.large,
+    .button.large {
+        padding: $btn-padding-y-lg $btn-padding-x-lg;
+        font-size: $btn-font-size-lg;
+        border-radius: $btn-border-radius-lg;
+    }
+}
