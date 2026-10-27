@@ -1,5 +1,5 @@
 {
-    "name": "devstudio-rs/theme",
+    "name": "author/theme",
     "autoload": {
         "psr-4": {
             "theme\\": "."
@@ -7,8 +7,8 @@
     },
     "authors": [
         {
-            "name": "dev.studio",
-            "email": "kontakt@devstudio.rs"
+            "name": "author",
+            "email": "kontakt@example.rs"
         }
     ],
     "require": {
